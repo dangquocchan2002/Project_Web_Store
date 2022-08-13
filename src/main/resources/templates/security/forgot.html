@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/index :: dynamic(~{::main})}">
+
+
+<body>
+	<main>
+		<form th:action="@{/send}" method="post"
+			class="col-sm-8 col-sm-offset-2">
+			<div class="panel panel-primary">
+				<div class="panel-heading">QUEN MAT KHAU</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<div>Username:</div>
+						<input type="text" name="username" class="form-control">
+					</div>
+					<div class="form-group">
+						<div>Email:</div>
+						<input type="email" name="email" class="form-control">
+					</div>
+					
+
+
+
+
+
+				</div>
+				<div class="panel-footer text-right">
+					
+
+					
+					<i class="pull-left text-danger" th:text="${message}"></i>
+					
+
+					<button type="submit" class="btn btn-success">
+						<i class="glyphicon glyphicon-envelope"></i> Send password
+					</button>
+				</div>
+			</div>
+		</form>
+	</main>
+</body>
+</html>
